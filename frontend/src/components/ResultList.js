@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -16,14 +17,16 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form>
-        <input
-          type="text"
-          placeholder="Filter for activities"
-          value={this.props.filterText}
-          onChange={this.handleFilterTextChange}
-        />
-      </form>
+        <Card sx={{ maxWidth: 700, margin: "0 auto" }}>
+          <CardContent>
+            <TextField
+              type="search"
+              label="Filter for activities"
+              value={this.props.filterText}
+              onChange={this.handleFilterTextChange}
+            />
+          </CardContent>
+        </Card>
     );
   }
 }
