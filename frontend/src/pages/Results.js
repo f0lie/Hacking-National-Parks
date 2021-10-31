@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import ResultList from '../components/ResultList'
+import FilterableResultsList from '../components/ResultList'
 
 const Results = () => {
     const [parks, setParks] = useState([]);
@@ -29,7 +30,7 @@ const Results = () => {
     return(
         <div className="main-container">
             <div>
-                <ResultList results = {parks} />
+                <FilterableResultsList results = {parks} />
             </div>
         </div>
     )
