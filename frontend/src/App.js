@@ -1,12 +1,26 @@
 import './App.css';
 import React from 'react'
-import Home from './pages/Home'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from './pages/Home';
+import Results from './pages/Results';
+
 function App() {
+
   return (
-    <div className="App">
-      <Home />
-      
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/results">
+          <Results />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
